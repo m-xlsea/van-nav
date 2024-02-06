@@ -1,4 +1,5 @@
 import axios from "axios";
+
 axios.defaults.headers.common = {
   Authorization: window.localStorage.getItem("_token") ?? "",
 };

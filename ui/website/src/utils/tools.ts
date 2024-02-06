@@ -1,4 +1,4 @@
-import { useRef, useCallback } from "react";
+import {useCallback, useRef} from "react";
 
 export const useDebounce = (fn: any, delay: number) => {
   const { current } = useRef<{ time: any }>({ time: null });

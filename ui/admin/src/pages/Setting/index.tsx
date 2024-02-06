@@ -1,8 +1,9 @@
-import { Button, Card, Form, Input, message, Select, Spin, Switch } from "antd";
-import { useCallback, useContext, useEffect } from "react";
-import { GlobalContext } from "../../components/GlobalContext";
-import { fetchUpdateSetting, fetchUpdateUser } from "../../utils/api";
+import {Button, Card, Form, Input, message, Select, Spin, Switch} from "antd";
+import {useCallback, useContext, useEffect} from "react";
+import {GlobalContext} from "../../components/GlobalContext";
+import {fetchUpdateSetting, fetchUpdateUser} from "../../utils/api";
 import "./index.css";
+
 export interface SettingProps { }
 export const Setting: React.FC<SettingProps> = (props) => {
   const { store, reload, loading } = useContext(GlobalContext);

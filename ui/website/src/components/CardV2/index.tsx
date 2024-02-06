@@ -1,30 +1,46 @@
-import { useMemo } from "react";
-import "./index.css";
-import { getLogoUrl } from "../../utils/check";
-import { getJumpTarget } from "../../utils/setting";
+import {useMemo} from 'react'
+import './index.css'
+import {getLogoUrl} from '../../utils/check'
+import {getJumpTarget} from '../../utils/setting'
+
 const Card = ({ title, url, des, logo, catelog, onClick, index, isSearching }) => {
   const el = useMemo(() => {
-    if (url === "admin") {
-      return <img src={logo} alt={title} />
+      if (url === 'admin') {
+          return (
+              <img
+                  src={logo}
+                  alt={title}
+              />
+          )
     } else {
-      if (logo.split(".").pop().includes("svg")) {
-        return <embed src={getLogoUrl(logo)} type="image/svg+xml" />
+          if (logo.split('.').pop().includes('svg')) {
+              return (
+                  <embed
+                      src={getLogoUrl(logo)}
+                      type="image/svg+xml"
+                  />
+              )
       } else {
-        return <img src={getLogoUrl(logo)} alt={title} />
+              return (
+                  <img
+                      src={getLogoUrl(logo)}
+                      alt={title}
+                  />
+              )
       }
     }
   }, [logo, title, url])
-  const showNumIndex = index < 10 && isSearching;
+    // const showNumIndex = index < 10 && isSearching
+    const showNumIndex = false
   return (
     <a
-      href={url === "toggleJumpTarget" ? undefined : url}
+        href={url === 'toggleJumpTarget' ? undefined : url}
       onClick={() => {
-        onClick();
+          onClick()
       }}
-      target={getJumpTarget() === "blank" ? "_blank" : "_self"}
+        target={getJumpTarget() === 'blank' ? '_blank' : '_self'}
       rel="noreferrer"
-      className="card-box"
-    >
+        className="card-box">
       {showNumIndex && <span className="card-index">{index + 1}</span>}
       <div className="card-content">
         <div className="card-left">
@@ -37,14 +53,26 @@ const Card = ({ title, url, des, logo, catelog, onClick, index, isSearching }) =
         </div>
         <div className="card-right">
           <div className="card-right-top">
-            <span className="card-right-title" title={title}>{title}</span>
-            <span className="card-tag" title={catelog}>{catelog}</span>
+            <span
+                className="card-right-title"
+                title={title}>
+              {title}
+            </span>
+              <span
+                  className="card-tag"
+                  title={catelog}>
+              {catelog}
+            </span>
           </div>
-          <div className="card-right-bottom" title={des}>{des}</div>
+            <div
+                className="card-right-bottom"
+                title={des}>
+                {des}
+            </div>
         </div>
       </div>
     </a>
-  );
-};
+  )
+}
 
-export default Card;
+export default Card

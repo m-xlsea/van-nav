@@ -365,8 +365,7 @@ func BinaryFileSystem(data embed.FS, root string) *binaryFileSystem {
 	}
 }
 
-
-var port = flag.String("port","6412","指定监听端口")
+var port = flag.String("port", "6412", "指定监听端口")
 
 func main() {
 	flag.Parse()
@@ -417,7 +416,7 @@ func main() {
 		}
 	}
 	fmt.Printf("应用启动成功，网址: http://localhost:%s", *port)
-	listen := fmt.Sprintf(":%s",*port)
+	listen := fmt.Sprintf(":%s", *port)
 	router.Run(listen)
 }
 
@@ -466,16 +465,15 @@ func getSetting(db *sql.DB) Setting {
 	err := row.Scan(&setting.Id, &setting.Favicon, &setting.Title, &setting.GovRecord, &setting.Logo192, &setting.Logo512, &hideAdmin, &hideGithub, &jumpTargetBlank)
 	if err != nil {
 		return Setting{
-			Id:         0,
-			Favicon:    "favicon.ico",
-			Title:      "Van Nav",
-			GovRecord:  "",
-			Logo192:    "logo192.png",
-			Logo512:    "logo512.png",
-			HideAdmin:  false,
-			HideGithub: false,
+			Id:              0,
+			Favicon:         "favicon.ico",
+			Title:           "Van Nav",
+			GovRecord:       "",
+			Logo192:         "logo192.png",
+			Logo512:         "logo512.png",
+			HideAdmin:       false,
+			HideGithub:      false,
 			JumpTargetBlank: true,
-		
 		}
 	}
 	if hideGithub == nil {
@@ -496,8 +494,6 @@ func getSetting(db *sql.DB) Setting {
 			setting.HideAdmin = true
 		}
 	}
-
-
 
 	if jumpTargetBlank == nil {
 		setting.JumpTargetBlank = true

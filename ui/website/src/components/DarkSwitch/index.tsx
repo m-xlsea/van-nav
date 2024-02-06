@@ -1,5 +1,5 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { applyTheme, decodeTheme, initTheme } from "../../utils/theme";
+import {useEffect, useLayoutEffect, useRef, useState} from "react";
+import {applyTheme, decodeTheme, initTheme} from "../../utils/theme";
 import "./index.css";
 
 const DarkSwitch = ({ showGithub }: { showGithub: boolean }) => {

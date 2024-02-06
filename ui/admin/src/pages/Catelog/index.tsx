@@ -1,10 +1,10 @@
-
-import { Button, Card, Form, Input, InputNumber, Modal, message, Popconfirm, Space, Spin, Table, Tooltip } from 'antd';
-import { QuestionCircleOutlined } from '@ant-design/icons';
-import { useCallback, useContext, useState } from 'react';
-import { GlobalContext } from '../../components/GlobalContext';
-import { fetchAddCateLog, fetchDeleteCatelog, fetchUpdateCateLog } from '../../utils/api';
+import {Button, Card, Form, Input, InputNumber, message, Modal, Popconfirm, Space, Spin, Table, Tooltip} from 'antd';
+import {QuestionCircleOutlined} from '@ant-design/icons';
+import {useCallback, useContext, useState} from 'react';
+import {GlobalContext} from '../../components/GlobalContext';
+import {fetchAddCateLog, fetchDeleteCatelog, fetchUpdateCateLog} from '../../utils/api';
 import './index.css'
+
 export interface CatelogProps  {
 
 }

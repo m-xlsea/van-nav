@@ -1,5 +1,5 @@
-import { Navigate } from "react-router-dom";
-import { getLoginState } from "../../utils";
+import {Navigate} from "react-router-dom";
+import {getLoginState} from "../../utils";
 import "./index.css";
 
 export interface AuthProps {

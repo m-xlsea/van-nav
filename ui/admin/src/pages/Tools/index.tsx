@@ -1,32 +1,27 @@
 import {
-  Button,
-  Card,
-  Modal,
-  Popconfirm,
-  Space,
-  Spin,
-  Table,
-  Form,
-  Input,
-  InputNumber,
-  Select,
-  Upload,
-  message,
-  Tooltip,
-  Switch
+    Button,
+    Card,
+    Form,
+    Input,
+    InputNumber,
+    message,
+    Modal,
+    Popconfirm,
+    Select,
+    Space,
+    Spin,
+    Switch,
+    Table,
+    Tooltip,
+    Upload
 } from "antd";
-import { QuestionCircleOutlined } from '@ant-design/icons';
-import { useCallback, useContext, useState } from "react";
-import { GlobalContext } from "../../components/GlobalContext";
-import { getFilter, getOptions, mutiSearch } from "../../utils";
-import {
-  fetchAddTool,
-  fetchDeleteTool,
-  fetchExportTools,
-  fetchImportTools,
-  fetchUpdateTool,
-} from "../../utils/api";
+import {QuestionCircleOutlined} from '@ant-design/icons';
+import {useCallback, useContext, useState} from "react";
+import {GlobalContext} from "../../components/GlobalContext";
+import {getFilter, getOptions, mutiSearch} from "../../utils";
+import {fetchAddTool, fetchDeleteTool, fetchExportTools, fetchImportTools, fetchUpdateTool,} from "../../utils/api";
 import "./index.css";
+
 export interface ToolsProps { }
 export const Tools: React.FC<ToolsProps> = (props) => {
   const { store, setStore, reload, loading } = useContext(GlobalContext);

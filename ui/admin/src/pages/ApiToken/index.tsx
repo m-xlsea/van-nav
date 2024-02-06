@@ -1,9 +1,9 @@
-
-import { Button, Card, Form, Input, Modal, message, Popconfirm, Space, Spin, Table, Typography } from 'antd';
-import { useCallback, useContext, useState } from 'react';
-import { GlobalContext } from '../../components/GlobalContext';
-import { fetchAddApiToken, fetchDeleteApiToken } from '../../utils/api';
+import {Button, Card, Form, Input, message, Modal, Popconfirm, Space, Spin, Table, Typography} from 'antd';
+import {useCallback, useContext, useState} from 'react';
+import {GlobalContext} from '../../components/GlobalContext';
+import {fetchAddApiToken, fetchDeleteApiToken} from '../../utils/api';
 import './index.css'
+
 export interface ApiTokenProps  {
 
 }

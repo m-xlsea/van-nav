@@ -1,5 +1,6 @@
 import "./index.css";
-import { useCallback } from "react";
+import {useCallback} from "react";
+
 interface TagSelectorProps {
   tags: any;
   onTagChange: (newTag: string) => void;

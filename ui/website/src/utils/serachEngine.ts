@@ -1,35 +1,33 @@
 export const generateSearchEngineCard = (searchString: string) => {
-  if (!searchString.trim()) return [];
+    if (!searchString.trim()) return []
   const result = [
     {
-      name: "使用百度搜索",
+        name: '百度',
       url: searchBaidu(searchString),
-      desc: `在百度中搜索 「${searchString}」`,
+        desc: `百度一下，你就知道`,
       id: 8800880001,
-      logo: "baidu.ico",
+        logo: 'baidu.svg',
       hide: false
     },
     {
-      name: "使用 Bing 搜索",
+        name: '必应',
       url: searchBing(searchString),
-      desc: `在 Bing 中搜索 「${searchString}」`,
+        desc: `Bing`,
       id: 8800880002,
-      logo: "bing.ico",
+        logo: 'bing.svg',
       hide: false
     },
     {
-      name: "使用 Google 搜索",
+        name: '谷歌',
       url: searchGoogle(searchString),
-      desc: `在 Google 中搜索 「${searchString}」`,
+        desc: `Google`,
       id: 8800880003,
-      logo: "google.ico",
+        logo: 'google.svg',
       hide: false
     }
   ]
-  return result;
+    return result
 }
-
-
 
 const searchBaidu = (q: string) => {
   return `https://www.baidu.com/s?wd=${q}`
